@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.UI;
+
 
 public class Loading : MonoBehaviour
 {
+    private static AsyncOperationHandle<SceneInstance> m_SceneLoadingOpHandle;
+
     private AsyncOperation m_SceneOperation;
 
     [SerializeField]
@@ -20,14 +25,18 @@ public class Loading : MonoBehaviour
 
     private IEnumerator loadNextLevel(string level)
     {
-        m_SceneOperation = SceneManager.LoadSceneAsync(level);
-        m_SceneOperation.allowSceneActivation = false;
 
-        while (!m_SceneOperation.isDone)
+        m_SceneLoadingOpHandle = Addressables.LoadSceneAsync(level, activateOnLoad: true);
+
+        //m_SceneOperation = SceneManager.LoadSceneAsync(level);
+        //m_SceneOperation.allowSceneActivation = false;
+
+        while (!m_SceneLoadingOpHandle.IsDone)
         {
-            m_LoadingSlider.value = m_SceneOperation.progress;
+            //m_LoadingSlider.value = m_SceneOperation.progress;
+            m_LoadingSlider.value = m_SceneLoadingOpHandle.PercentComplete;
 
-            if (m_SceneOperation.progress >= 0.9f && !m_PlayButton.activeInHierarchy)
+            if (m_SceneLoadingOpHandle.PercentComplete >= 0.9f && !m_PlayButton.activeInHierarchy)
                 m_PlayButton.SetActive(true);
 
             yield return null;
@@ -37,8 +46,8 @@ public class Loading : MonoBehaviour
     }
 
     // Function to handle which level is loaded next
-    public void GoToNextLevel()
-    {
-        m_SceneOperation.allowSceneActivation = true;
-    }
+    //public void GoToNextLevel()
+    //{
+    //    m_SceneOperation.allowSceneActivation = true;
+    //}
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 30cddb3155427b64ab464261bdf6811c
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: 246116000b5aa2b21dc42bb72d0d36db
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -63,10 +63,76 @@ MonoBehaviour:
         m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
       - m_Id: 601a294a8db881b4fb07005e159c3456
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
-      - m_Id: 048c2aeaba1287f479d0ab599a4d935b
+      - m_Id: 093c91b15b00bb342a681b054255f695
+        m_Value: DEFAULT
+      - m_Id: 145ff1365f775d648b0848f83d171a27
+        m_Value: here
+      - m_Id: a2872e6084a14834494bf9eeb7caa873
+        m_Value: there
+    - m_InheritedParent: 
+      m_Id: 377e9e271dd918c43a333402fdfd8d9d
+      m_ProfileName: Development
+      m_Values:
+      - m_Id: 670bf56f07d07604694550f849f7b28a
+        m_Value: https://unity.com/LoadyDungeons/DEV_StandaloneWindows64/.
+      - m_Id: 10b4617a138bdf14f9c25c96961f41d4
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 601a294a8db881b4fb07005e159c3456
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 093c91b15b00bb342a681b054255f695
+        m_Value: DEV
+      - m_Id: 145ff1365f775d648b0848f83d171a27
         m_Value: ServerData/[BuildTarget]
-      - m_Id: dda1cac510ce1654c95ce94a9ce200cc
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+      - m_Id: a2872e6084a14834494bf9eeb7caa873
+        m_Value: https://unity.com/{UnityEditor.PlayerSettings.productName}/[RemoteHost]_[BuildTarget]
+    - m_InheritedParent: 
+      m_Id: 65c76d2df1b1fa74fa80843442d8828e
+      m_ProfileName: Production
+      m_Values:
+      - m_Id: 670bf56f07d07604694550f849f7b28a
+        m_Value: https://unity.com/LoadyDungeons/PROD_iOS/
+      - m_Id: 10b4617a138bdf14f9c25c96961f41d4
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 601a294a8db881b4fb07005e159c3456
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 093c91b15b00bb342a681b054255f695
+        m_Value: PROD
+      - m_Id: 145ff1365f775d648b0848f83d171a27
+        m_Value: here
+      - m_Id: a2872e6084a14834494bf9eeb7caa873
+        m_Value: there
+    - m_InheritedParent: 
+      m_Id: 9b6f2cabcc46f5e4f9ba7a9c1ebb5f20
+      m_ProfileName: QA
+      m_Values:
+      - m_Id: 670bf56f07d07604694550f849f7b28a
+        m_Value: https://unity.com/LoadyDungeons/QA_Android/
+      - m_Id: 10b4617a138bdf14f9c25c96961f41d4
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 601a294a8db881b4fb07005e159c3456
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 093c91b15b00bb342a681b054255f695
+        m_Value: DEFAULT
+      - m_Id: 145ff1365f775d648b0848f83d171a27
+        m_Value: here
+      - m_Id: a2872e6084a14834494bf9eeb7caa873
+        m_Value: there
+    - m_InheritedParent: 
+      m_Id: c002fe0565f11fd46a611e51504ef42e
+      m_ProfileName: Release
+      m_Values:
+      - m_Id: 670bf56f07d07604694550f849f7b28a
+        m_Value: https://unity.com/LoadyDungeons/PROD_iOS/
+      - m_Id: 10b4617a138bdf14f9c25c96961f41d4
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 601a294a8db881b4fb07005e159c3456
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 093c91b15b00bb342a681b054255f695
+        m_Value: REL
+      - m_Id: 145ff1365f775d648b0848f83d171a27
+        m_Value: here
+      - m_Id: a2872e6084a14834494bf9eeb7caa873
+        m_Value: there
     m_ProfileEntryNames:
     - m_Id: 670bf56f07d07604694550f849f7b28a
       m_Name: BuildTarget
@@ -77,10 +143,13 @@ MonoBehaviour:
     - m_Id: 601a294a8db881b4fb07005e159c3456
       m_Name: Local.LoadPath
       m_InlineUsage: 0
-    - m_Id: 048c2aeaba1287f479d0ab599a4d935b
+    - m_Id: 093c91b15b00bb342a681b054255f695
+      m_Name: RemoteHost
+      m_InlineUsage: 0
+    - m_Id: 145ff1365f775d648b0848f83d171a27
       m_Name: Remote.BuildPath
       m_InlineUsage: 0
-    - m_Id: dda1cac510ce1654c95ce94a9ce200cc
+    - m_Id: a2872e6084a14834494bf9eeb7caa873
       m_Name: Remote.LoadPath
       m_InlineUsage: 0
     m_ProfileVersion: 1
@@ -100,7 +169,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3519c57c69665524a8231e02531f4e20, type: 2}
   - {fileID: 11400000, guid: 8531f69fea0aaa84a9ca0bb3c697d96f, type: 2}
   - {fileID: 11400000, guid: 28d4418c00258c8499326e3a13aa8f8d, type: 2}
-  m_ActiveProfileId: d166e09729af411408bc2a8a7eec546c
+  m_ActiveProfileId: 377e9e271dd918c43a333402fdfd8d9d
   m_HostingServicesManager:
     m_HostingServiceInfos: []
     m_Settings: {fileID: 11400000}
